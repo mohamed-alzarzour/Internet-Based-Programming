@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Example</title>
+  <style>
+   header {
+     background-color: #333;
+     color: #fff;
+     padding: 10px;
+     text-align: center;
+     }
+   footer {
+     background-color: #333;
+     color: #fff;
+     padding: 10px;
+     text-align: center;
+     }
+    form {
+      text-align: center;
+      margin-top: 200px;
+    }
+    input[type=text] {
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>WH4</h1>
+</header>
+
+  <form method="get" action="target_get.php" target="_blank">
+    <input type="text" name="name" placeholder="Enter your name" required>
+    <br><br>
+    <input type="email" name="email" placeholder="Enter your email" required>
+    <br><br>
+    <button type="submit">Submit (GET)</button>
+  </form>
+
+  <form method="post" action="target_post.php" target="_blank">
+    <input type="text" name="name" placeholder="Enter your name" required>
+    <br><br>
+    <input type="email" name="email" placeholder="Enter your email" required>
+    <br><br>
+    <button type="submit">Submit (POST)</button>
+  </form>
+  
+  <canvas id="myCanvas"></canvas>
+<script>
+ 
+  const canvas = document.getElementById('myCanvas');
+  const context = canvas.getContext('2d');
+  
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  
+  const centerX = canvas.width / 2;
+  const centerY = canvas.height / 2;
+  
+  context.beginPath();
+  context.arc(centerX, centerY, 200, 0, 2 * Math.PI);
+  context.fillStyle = 'red';
+  context.fill();
+  
+  context.font = 'bold 100px Arial';
+  context.fillStyle = 'white';
+  context.textAlign = 'center';
+  context.fillText('M', centerX, centerY + 35);
+</script>
+<footer>
+  <p1>MOHAMED ALZARZOUR - 2110205631</p1>
+</footer>
+</body>
+</html>
